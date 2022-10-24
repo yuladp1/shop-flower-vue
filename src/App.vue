@@ -1,15 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+        <nav>
+            <button class="burger-menu"></button>
+        <figure class="header-logo"> <img src="assets/images/logo.png" alt=""></figure>
+        <div class="wrapper-basket-and-lupa">
+            <figure><img src="assets/images/lupa.png" alt=" "></figure>
+            <button @click="toggleSidebar"></button>
+        </div>
+        </nav>
+        <sidebar v-if="showSidebar"/>    
+    </header>
+  
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    
   }
 }
 </script>
@@ -24,3 +33,5 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+
